@@ -1,6 +1,13 @@
+## Java XML Parsers ##
+
+[TOC]
+
+----------
 Java JDK is built-in XML parsers, DOM and SAX.
 
 **DOM XML Parser**
+------------------
+
 The DOM is the easiest way to use Java XML Parser. It parses an entire XML document and load it into memory, modeling it with object for easy model traversal. DOM Parser is slow and consume a lot memory if it load a XML document which contains a lot of data.
 
 Note: DOM Parser is slow and consumes a lot of memory when it loads an XML document which contains a lot of data. 
@@ -124,3 +131,56 @@ Output:
     Node Name =rank --F:End
     Node Name =student --F:End
     Node Name =school --F:End
+
+
+
+**SAX XML Parser**
+------------------
+
+SAX Parser is work differently with DOM parser, it does not load any XML document into memory and create some object representation of the XML document. Instead, the SAX parser use callback function `org.xml.sax.helpers.defaultHandler` to informs clients of the XML document Structure.
+
+**Note**: SAX Parser is faster and uses less memory than DOM parser.
+
+A. Read XML File using SAX Parser
+
+SAX callback methods :
+
+    startDocument() and endDocument() : Method called at the start and end of an XML document.
+    startElement() and endElement() : Method called at the start and end of a document element.
+    characters() : Method called with the text contents in between the start and end tags of an XML document element.
+
+Input: sample-1.xml
+Codes: ReadXMLFile.java
+Output:
+
+    Start Element : school
+    Start Element : student
+    Start Element : firstname
+    First Name : Jack
+    End Element : firstname
+    Start Element : lastname
+    Last Name : Wang
+    End Element : lastname
+    Start Element : nickname
+    Nick Name : J
+    End Element : nickname
+    Start Element : rank
+    Rank : 10
+    End Element : rank
+    End Element : student
+    Start Element : student
+    Start Element : firstname
+    First Name : Make
+    End Element : firstname
+    Start Element : lastname
+    Last Name : Zhang
+    End Element : lastname
+    Start Element : nickname
+    Nick Name : fong
+    End Element : nickname
+    Start Element : rank
+    Rank : 06
+    End Element : rank
+    End Element : student
+    End Element : school
+
