@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<school>
+	<student id="0001">
+		<firstname>Jack</firstname>
+		<lastname>Wang</lastname>
+		<nickname>J</nickname>
+		<rank>10</rank>
+	</student>
+	<student id="0100">
+		<firstname>Make</firstname>
+		<lastname>Zhang</lastname>
+		<nickname>fong</nickname>
+		<rank>06</rank>
+	</student>
+</school>
