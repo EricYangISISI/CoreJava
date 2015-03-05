@@ -58,7 +58,9 @@ Output:
 **B. Traverse a XML file**
 
 Input: sample-1.xml
+
 Codes: TraverseXML.java
+
 Output: 
 
     Root Element : school
@@ -152,7 +154,9 @@ SAX callback methods :
     characters() : Method called with the text contents in between the start and end tags of an XML document element.
 
 Input: sample-1.xml
+
 Codes: ReadXMLFile.java
+
 Output:
 
     Start Element : school
