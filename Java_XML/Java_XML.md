@@ -1,6 +1,8 @@
 ## Java XML Parsers ##
 
-[TOC]
+DOM XML Parser
+
+SAX XML Parser
 
 ----------
 Java JDK is built-in XML parsers, DOM and SAX.
